@@ -1,0 +1,49 @@
+adhikari@ifarm1101> cd GitTests/
+adhikari@ifarm1101> mkdir Proj1
+adhikari@ifarm1101> cd Proj1/
+adhikari@ifarm1101> ls -a
+.  ..
+adhikari@ifarm1101> pwd
+/lustre/expphy/volatile/clas/claseg4/adhikari/Tests/GitTests/Proj1
+adhikari@ifarm1101> ls -a
+.  ..
+adhikari@ifarm1101> git init
+Initialized empty Git repository in /lustre/expphy/volatile/clas/claseg4/adhikari/Tests/GitTests/Proj1/.git/
+adhikari@ifarm1101> ls -a
+.  ..  .git
+adhikari@ifarm1101> e whatI_did_here.txt &
+adhikari@ifarm1101> ls -a
+.  ..  .git  whatI_did_here.txt
+adhikari@ifarm1101> git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        whatI_did_here.txt
+        whatI_did_here.txt~
+
+nothing added to commit but untracked files present (use "git add" to track)
+adhikari@ifarm1101> ls
+whatI_did_here.txt  whatI_did_here.txt~
+adhikari@ifarm1101>
+adhikari@ifarm1101> touch kpadhikari.txt
+adhikari@ifarm1101> ls
+kpadhikari.txt  whatI_did_here.txt  whatI_did_here.txt~
+adhikari@ifarm1101> m kpadhikari.txt
+adhikari@ifarm1101> git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        kpadhikari.txt
+        whatI_did_here.txt
+        whatI_did_here.txt~
+
+nothing added to commit but untracked files present (use "git add" to track)
+adhikari@ifarm1101>
