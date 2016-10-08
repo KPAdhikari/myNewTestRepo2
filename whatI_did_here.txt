@@ -108,3 +108,90 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 adhikari@ifarm1101>
+adhikari@ifarm1101> git add kpadhikari.txt
+adhikari@ifarm1101> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   whatI_did_here.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        whatI_did_here.txt~
+
+no changes added to commit (use "git add" and/or "git commit -a")
+adhikari@ifarm1101> git commit -m "This is my second commit with more comments added to whatI_did_here.txt."
+On branch master
+Changes not staged for commit:
+        modified:   whatI_did_here.txt
+
+Untracked files:
+        whatI_did_here.txt~
+
+no changes added to commit
+adhikari@ifarm1101> git add wh
+whatI_did_here.txt~  whatI_did_here.txt   
+adhikari@ifarm1101> git add whatI_did_here.txt
+adhikari@ifarm1101> git commit -m "This is my second commit with more comments added to whatI_did_here.txt."
+[master 4dbf91b] This is my second commit with more comments added to whatI_did_here.txt.
+ 1 file changed, 61 insertions(+)
+adhikari@ifarm1101> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        whatI_did_here.txt~
+
+nothing added to commit but untracked files present (use "git add" to track)
+adhikari@ifarm1101>
+adhikari@ifarm1101> m fileForBrachTest.txt 
+This text added before a new branch was added, i.e. when
+I was on a master branch.
+adhikari@ifarm1101> ls
+fileForBrachTest.txt  kpadhikari.txt  whatI_did_here.txt
+adhikari@ifarm1101>
+adhikari@ifarm1101> git add fileForBrachTest.txt 
+adhikari@ifarm1101> git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   fileForBrachTest.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   whatI_did_here.txt
+
+adhikari@ifarm1101>
+adhikari@ifarm1101> ls
+fileForBrachTest.txt  kpadhikari.txt  whatI_did_here.txt
+adhikari@ifarm1101> git checkout -b myTestBranch
+A       fileForBrachTest.txt
+M       whatI_did_here.txt
+Switched to a new branch 'myTestBranch'
+adhikari@ifarm1101> ls
+fileForBrachTest.txt  kpadhikari.txt  whatI_did_here.txt
+adhikari@ifarm1101> git branch
+  master
+* myTestBranch
+adhikari@ifarm1101> du -sh
+4.0M    .
+adhikari@ifarm1101> git status
+On branch myTestBranch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   fileForBrachTest.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   whatI_did_here.txt
+
+

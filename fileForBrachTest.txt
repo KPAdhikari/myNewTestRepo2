@@ -1,0 +1,2 @@
+This text added before a new branch was added, i.e. when
+I was on a master branch.
