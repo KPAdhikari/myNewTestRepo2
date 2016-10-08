@@ -254,3 +254,12 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
 To https://github.com/KPAdhikari/myNewTestRepo2.git
  * [new branch]      myTestBranch -> myTestBranch
 adhikari@ifarm1101>
+adhikari@ifarm1101> du -sh
+3.9M    .
+adhikari@ifarm1101> git add *
+adhikari@ifarm1101> ls
+fileForBrachTest.txt  kpadhikari.txt  whatI_did_here.txt
+adhikari@ifarm1101> git commit -m "This is my commit after pushing both branches to my github repo"
+[myTestBranch d286e3b] This is my commit after pushing both branches to my github repo
+ 1 file changed, 60 insertions(+), 1 deletion(-)
+adhikari@ifarm1101>
