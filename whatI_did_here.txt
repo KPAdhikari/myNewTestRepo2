@@ -194,4 +194,63 @@ Changes not staged for commit:
 
         modified:   whatI_did_here.txt
 
-
+adhikari@ifarm1101> git add whatI_did_here.txt 
+adhikari@ifarm1101> git commit -m "This is my first commit to the branch myTestBranch"
+[myTestBranch 2808469] This is my first commit to the branch myTestBranch
+ 2 files changed, 89 insertions(+)
+ create mode 100644 fileForBrachTest.txt
+adhikari@ifarm1101> git status
+On branch myTestBranch
+nothing to commit, working directory clean
+adhikari@ifarm1101>
+adhikari@ifarm1101> ls .git/
+branches  COMMIT_EDITMSG  config  description  HEAD  hooks  index  info  logs  objects  refs
+adhikari@ifarm1101> ls .git/branches/
+adhikari@ifarm1101> pwd
+/lustre/expphy/volatile/clas/claseg4/adhikari/Tests/GitTests/Proj1
+adhikari@ifarm1101> git remote add origin https://github.com/KPAdhikari/Proj1.git
+adhikari@ifarm1101> git push -u origin master
+fatal: unable to access 'https://github.com/KPAdhikari/Proj1.git/': Couldn't resolve host 'github.com'
+adhikari@ifarm1101> git push -u origin master
+fatal: unable to access 'https://github.com/KPAdhikari/Proj1.git/': Couldn't resolve host 'github.com'
+adhikari@ifarm1101> git remote add origin https://github.com/KPAdhikari/myNewTestRepo.git
+fatal: remote origin already exists.
+adhikari@ifarm1101> git remote set-url origin https://github.com/KPAdhikari/myNewTestRepo.git
+adhikari@ifarm1101> git push -u origin master
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+To https://github.com/KPAdhikari/myNewTestRepo.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/KPAdhikari/myNewTestRepo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+adhikari@ifarm1101>
+adhikari@ifarm1101> git remote set-url origin https://github.com/KPAdhikari/myNewTestRepo2.git
+adhikari@ifarm1101> git push -u origin master
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 1.17 KiB | 0 bytes/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+adhikari@ifarm1101>
+adhikari@ifarm1101> git push origin myTestBranch
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 873 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+ * [new branch]      myTestBranch -> myTestBranch
+adhikari@ifarm1101>
