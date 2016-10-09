@@ -398,3 +398,84 @@ To https://github.com/KPAdhikari/myNewTestRepo2.git
    ea82bae..e6196ff  master -> master
 adhikari@ifarm1101> ls
 fileForBrachTest.txt  kpadhikari.txt  whatI_did_here.txt
+adhikari@ifarm1101> git add whatI_did_here.txt
+adhikari@ifarm1101> git commit -m "This is my second commit after coming back to the master branch from the other one."
+[master 42d74ce] This is my second commit after coming back to the master branch from the other one.
+ 1 file changed, 70 insertions(+), 3 deletions(-)
+adhikari@ifarm1101> git push origin master
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 895 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+   e6196ff..42d74ce  master -> master
+adhikari@ifarm1101>
+adhikari@ifarm1101> git log
+commit 42d74ce71373c837a5343ca92ba649f1e8b32bce
+Author: KrishnaAdhikari <adhikari_kp@hotmail.com>
+Date:   Sat Oct 8 23:29:01 2016 -0400
+
+    This is my second commit after coming back to the master branch from the other one.
+
+commit e6196fff163a05a2439e6764bd7107cd88788471
+Merge: ff10671 ea82bae
+Author: KrishnaAdhikari <adhikari_kp@hotmail.com>
+Date:   Sat Oct 8 23:24:11 2016 -0400
+
+    This is my first commit after coming back to the master branch from the other one.
+
+commit ff10671c0eea638bb3ff22fc68784f6eb29438ea
+Author: KrishnaAdhikari <adhikari_kp@hotmail.com>
+Date:   Sat Oct 8 23:22:09 2016 -0400
+
+    This is my first commit after coming back to the master branch from the other one.
+
+commit ea82bae5f0b1ad4febd509074551a1a8e75051b1
+Merge: 4dbf91b e4b825f
+Author: KPAdhikari <kadhi001@odu.edu>
+Date:   Sat Oct 8 22:42:33 2016 -0400
+
+    Merge pull request #1 from KPAdhikari/myTestBranch
+    
+    My test branch
+
+commit e4b825facd35fa46d0f3ff652a32919e8a5a9faa
+Author: KrishnaAdhikari <adhikari_kp@hotmail.com>
+Date:   Sat Oct 8 21:12:54 2016 -0400
+
+    This is my third commit after pushing both branches to my github repo
+
+commit 7034ec9fcb3a574404c3d8739cef5991336431b2
+Author: KrishnaAdhikari <adhikari_kp@hotmail.com>
+Date:   Sat Oct 8 18:35:16 2016 -0400
+
+    This is my second commit after pushing both branches to my github repo
+
+commit d286e3bbfec060cb7451ab3ef88581a0e955532d
+Author: KrishnaAdhikari <adhikari_kp@hotmail.com>
+Date:   Sat Oct 8 18:34:11 2016 -0400
+
+    This is my commit after pushing both branches to my github repo
+
+commit 28084697a9f94edbc7aa8ca01b6da77e2b717d5c
+Author: KrishnaAdhikari <adhikari_kp@hotmail.com>
+Date:   Sat Oct 8 12:08:34 2016 -0400
+
+    This is my first commit to the branch myTestBranch
+
+commit 4dbf91b263e901c00a631b4e43e25cc0d9d60492
+Author: KrishnaAdhikari <adhikari_kp@hotmail.com>
+Date:   Sat Oct 8 10:08:46 2016 -0400
+
+    This is my second commit with more comments added to whatI_did_here.txt.
+
+commit ebd0baf9359d6b80185044b414239da83ee94de4
+Author: KrishnaAdhikari <adhikari_kp@hotmail.com>
+Date:   Sat Oct 8 09:55:17 2016 -0400
+
+    This is my first commit.
+adhikari@ifarm1101>
