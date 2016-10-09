@@ -287,6 +287,7 @@ remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
 To https://github.com/KPAdhikari/myNewTestRepo2.git
    2808469..7034ec9  myTestBranch -> myTestBranch
 adhikari@ifarm1101>
+<<<<<<< HEAD
 adhikari@ifarm1101> git add whatI_did_here.txt
 adhikari@ifarm1101> git commit -m "This is my third commit after pushing both branches to my github repo"
 [myTestBranch e4b825f] This is my third commit after pushing both branches to my github repo
@@ -328,3 +329,5 @@ adhikari@ifarm1101> git checkout master
 Switched to branch 'master'
 Your branch is up-to-date with 'origin/master'.
 adhikari@ifarm1101>
+=======
+>>>>>>> ea82bae5f0b1ad4febd509074551a1a8e75051b1
