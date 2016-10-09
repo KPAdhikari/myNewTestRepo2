@@ -263,3 +263,27 @@ adhikari@ifarm1101> git commit -m "This is my commit after pushing both branches
 [myTestBranch d286e3b] This is my commit after pushing both branches to my github repo
  1 file changed, 60 insertions(+), 1 deletion(-)
 adhikari@ifarm1101>
+adhikari@ifarm1101> git commit -m "This is my second commit after pushing both branches to my github repo"
+[myTestBranch 7034ec9] This is my second commit after pushing both branches to my github repo
+ 1 file changed, 9 insertions(+)
+adhikari@ifarm1101> git status
+On branch myTestBranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   whatI_did_here.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+adhikari@ifarm1101> git push origin myTestBranch
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.63 KiB | 0 bytes/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+   2808469..7034ec9  myTestBranch -> myTestBranch
+adhikari@ifarm1101>
