@@ -287,7 +287,6 @@ remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
 To https://github.com/KPAdhikari/myNewTestRepo2.git
    2808469..7034ec9  myTestBranch -> myTestBranch
 adhikari@ifarm1101>
-<<<<<<< HEAD
 adhikari@ifarm1101> git add whatI_did_here.txt
 adhikari@ifarm1101> git commit -m "This is my third commit after pushing both branches to my github repo"
 [myTestBranch e4b825f] This is my third commit after pushing both branches to my github repo
@@ -329,5 +328,73 @@ adhikari@ifarm1101> git checkout master
 Switched to branch 'master'
 Your branch is up-to-date with 'origin/master'.
 adhikari@ifarm1101>
-=======
->>>>>>> ea82bae5f0b1ad4febd509074551a1a8e75051b1
+adhikari@ifarm1101> git push origin myTestBranch
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 616 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+   e4b825f..34bd128  myTestBranch -> myTestBranch
+adhikari@ifarm1101> git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+adhikari@ifarm1101> ls
+kpadhikari.txt  whatI_did_here.txt  whatI_did_here.txt~
+adhikari@ifarm1101> clean
+adhikari@ifarm1101> ls
+kpadhikari.txt  whatI_did_here.txt
+adhikari@ifarm1101> git add whatI_did_here.txt
+adhikari@ifarm1101> git commit -m "This is my first commit after coming back to the master branch from the other one."
+[master ff10671] This is my first commit after coming back to the master branch from the other one.
+ 1 file changed, 220 insertions(+)
+adhikari@ifarm1101> git push origin master
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/KPAdhikari/myNewTestRepo2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+adhikari@ifarm1101> git pull origin master
+remote: Counting objects: 1, done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/KPAdhikari/myNewTestRepo2
+ * branch            master     -> FETCH_HEAD
+   4dbf91b..ea82bae  master     -> origin/master
+Auto-merging whatI_did_here.txt
+CONFLICT (content): Merge conflict in whatI_did_here.txt
+Automatic merge failed; fix conflicts and then commit the result.
+adhikari@ifarm1101> git push origin master
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/KPAdhikari/myNewTestRepo2.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+adhikari@ifarm1101> git add whatI_did_here.txt
+adhikari@ifarm1101> git commit -m "This is my first commit after coming back to the master branch from the other one."
+[master e6196ff] This is my first commit after coming back to the master branch from the other one.
+adhikari@ifarm1101> git push origin master
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.01 KiB | 0 bytes/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+   ea82bae..e6196ff  master -> master
+adhikari@ifarm1101> ls
+fileForBrachTest.txt  kpadhikari.txt  whatI_did_here.txt
