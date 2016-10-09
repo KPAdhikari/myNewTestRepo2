@@ -108,3 +108,223 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 adhikari@ifarm1101>
+adhikari@ifarm1101> git add kpadhikari.txt
+adhikari@ifarm1101> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   whatI_did_here.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        whatI_did_here.txt~
+
+no changes added to commit (use "git add" and/or "git commit -a")
+adhikari@ifarm1101> git commit -m "This is my second commit with more comments added to whatI_did_here.txt."
+On branch master
+Changes not staged for commit:
+        modified:   whatI_did_here.txt
+
+Untracked files:
+        whatI_did_here.txt~
+
+no changes added to commit
+adhikari@ifarm1101> git add wh
+whatI_did_here.txt~  whatI_did_here.txt   
+adhikari@ifarm1101> git add whatI_did_here.txt
+adhikari@ifarm1101> git commit -m "This is my second commit with more comments added to whatI_did_here.txt."
+[master 4dbf91b] This is my second commit with more comments added to whatI_did_here.txt.
+ 1 file changed, 61 insertions(+)
+adhikari@ifarm1101> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        whatI_did_here.txt~
+
+nothing added to commit but untracked files present (use "git add" to track)
+adhikari@ifarm1101>
+adhikari@ifarm1101> m fileForBrachTest.txt 
+This text added before a new branch was added, i.e. when
+I was on a master branch.
+adhikari@ifarm1101> ls
+fileForBrachTest.txt  kpadhikari.txt  whatI_did_here.txt
+adhikari@ifarm1101>
+adhikari@ifarm1101> git add fileForBrachTest.txt 
+adhikari@ifarm1101> git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   fileForBrachTest.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   whatI_did_here.txt
+
+adhikari@ifarm1101>
+adhikari@ifarm1101> ls
+fileForBrachTest.txt  kpadhikari.txt  whatI_did_here.txt
+adhikari@ifarm1101> git checkout -b myTestBranch
+A       fileForBrachTest.txt
+M       whatI_did_here.txt
+Switched to a new branch 'myTestBranch'
+adhikari@ifarm1101> ls
+fileForBrachTest.txt  kpadhikari.txt  whatI_did_here.txt
+adhikari@ifarm1101> git branch
+  master
+* myTestBranch
+adhikari@ifarm1101> du -sh
+4.0M    .
+adhikari@ifarm1101> git status
+On branch myTestBranch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   fileForBrachTest.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   whatI_did_here.txt
+
+adhikari@ifarm1101> git add whatI_did_here.txt 
+adhikari@ifarm1101> git commit -m "This is my first commit to the branch myTestBranch"
+[myTestBranch 2808469] This is my first commit to the branch myTestBranch
+ 2 files changed, 89 insertions(+)
+ create mode 100644 fileForBrachTest.txt
+adhikari@ifarm1101> git status
+On branch myTestBranch
+nothing to commit, working directory clean
+adhikari@ifarm1101>
+adhikari@ifarm1101> ls .git/
+branches  COMMIT_EDITMSG  config  description  HEAD  hooks  index  info  logs  objects  refs
+adhikari@ifarm1101> ls .git/branches/
+adhikari@ifarm1101> pwd
+/lustre/expphy/volatile/clas/claseg4/adhikari/Tests/GitTests/Proj1
+adhikari@ifarm1101> git remote add origin https://github.com/KPAdhikari/Proj1.git
+adhikari@ifarm1101> git push -u origin master
+fatal: unable to access 'https://github.com/KPAdhikari/Proj1.git/': Couldn't resolve host 'github.com'
+adhikari@ifarm1101> git push -u origin master
+fatal: unable to access 'https://github.com/KPAdhikari/Proj1.git/': Couldn't resolve host 'github.com'
+adhikari@ifarm1101> git remote add origin https://github.com/KPAdhikari/myNewTestRepo.git
+fatal: remote origin already exists.
+adhikari@ifarm1101> git remote set-url origin https://github.com/KPAdhikari/myNewTestRepo.git
+adhikari@ifarm1101> git push -u origin master
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+To https://github.com/KPAdhikari/myNewTestRepo.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/KPAdhikari/myNewTestRepo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+adhikari@ifarm1101>
+adhikari@ifarm1101> git remote set-url origin https://github.com/KPAdhikari/myNewTestRepo2.git
+adhikari@ifarm1101> git push -u origin master
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 1.17 KiB | 0 bytes/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+adhikari@ifarm1101>
+adhikari@ifarm1101> git push origin myTestBranch
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 873 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+ * [new branch]      myTestBranch -> myTestBranch
+adhikari@ifarm1101>
+adhikari@ifarm1101> du -sh
+3.9M    .
+adhikari@ifarm1101> git add *
+adhikari@ifarm1101> ls
+fileForBrachTest.txt  kpadhikari.txt  whatI_did_here.txt
+adhikari@ifarm1101> git commit -m "This is my commit after pushing both branches to my github repo"
+[myTestBranch d286e3b] This is my commit after pushing both branches to my github repo
+ 1 file changed, 60 insertions(+), 1 deletion(-)
+adhikari@ifarm1101>
+adhikari@ifarm1101> git commit -m "This is my second commit after pushing both branches to my github repo"
+[myTestBranch 7034ec9] This is my second commit after pushing both branches to my github repo
+ 1 file changed, 9 insertions(+)
+adhikari@ifarm1101> git status
+On branch myTestBranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   whatI_did_here.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+adhikari@ifarm1101> git push origin myTestBranch
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.63 KiB | 0 bytes/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+   2808469..7034ec9  myTestBranch -> myTestBranch
+adhikari@ifarm1101>
+adhikari@ifarm1101> git add whatI_did_here.txt
+adhikari@ifarm1101> git commit -m "This is my third commit after pushing both branches to my github repo"
+[myTestBranch e4b825f] This is my third commit after pushing both branches to my github repo
+ 1 file changed, 24 insertions(+)
+adhikari@ifarm1101> git push origin myTestBranch
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 486 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+   7034ec9..e4b825f  myTestBranch -> myTestBranch
+adhikari@ifarm1101>
+adhikari@ifarm1101> git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        whatI_did_here.txt
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+adhikari@ifarm1101>
+adhikari@ifarm1101> git add whatI_did_here.txt
+adhikari@ifarm1101> git commit -m "This is my fourth commit after pushing both branches to my github repo"
+[myTestBranch 34bd128] This is my fourth commit after pushing both branches to my github repo
+ 1 file changed, 22 insertions(+)
+adhikari@ifarm1101> git push origin myTestBranch
+Username for 'https://github.com': KPAdhikari
+Password for 'https://KPAdhikari@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 32 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 616 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/KPAdhikari/myNewTestRepo2.git
+   e4b825f..34bd128  myTestBranch -> myTestBranch
+adhikari@ifarm1101> git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+adhikari@ifarm1101>
